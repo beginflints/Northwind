@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c30y9o3PeUlcgpTEj1OPmEsCtnLNb2gxnf1b30im6oTy6tu7ibZO4tp9VjKitUQuYFzsVeJG4dCvouQD1E9rWA==",
+  "dgSpecHash": "7mE/zGrRwCn1WvVVDBfzOH1soSMAiarNLVz7oqFAfoLdnl0aQ7rfyNHRJzd//VcFh9cVibDEfCJfbbspxRpwXQ==",
   "success": true,
   "projectFilePath": "/Users/flints/Desktop/Project/Northwind/Northwind.API/Northwind.API.csproj",
   "expectedPackageFiles": [
@@ -20,9 +20,7 @@
     "/Users/flints/.nuget/packages/microsoft.extensions.primitives/5.0.0-preview.3.20215.2/microsoft.extensions.primitives.5.0.0-preview.3.20215.2.nupkg.sha512",
     "/Users/flints/.nuget/packages/system.collections.immutable/5.0.0-preview.3.20214.6/system.collections.immutable.5.0.0-preview.3.20214.6.nupkg.sha512",
     "/Users/flints/.nuget/packages/system.componentmodel.annotations/5.0.0-preview.3.20214.6/system.componentmodel.annotations.5.0.0-preview.3.20214.6.nupkg.sha512",
-    "/Users/flints/.nuget/packages/system.diagnostics.diagnosticsource/5.0.0-preview.3.20214.6/system.diagnostics.diagnosticsource.5.0.0-preview.3.20214.6.nupkg.sha512",
-    "/Users/flints/.nuget/packages/system.memory/4.5.2/system.memory.4.5.2.nupkg.sha512",
-    "/Users/flints/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0-preview.3.20214.6/system.runtime.compilerservices.unsafe.5.0.0-preview.3.20214.6.nupkg.sha512"
+    "/Users/flints/.nuget/packages/system.diagnostics.diagnosticsource/5.0.0-preview.3.20214.6/system.diagnostics.diagnosticsource.5.0.0-preview.3.20214.6.nupkg.sha512"
   ],
   "logs": []
 }
