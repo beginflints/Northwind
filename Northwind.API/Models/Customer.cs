@@ -1,6 +1,9 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DatingApp.API.Models
 {
-    public class Customers
+    [Table("Customers")]
+    public class Customer
     {
         public int CustomerID { get; set; }
         public string CompanyName { get; set; }

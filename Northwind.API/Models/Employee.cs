@@ -4,7 +4,8 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DatingApp.API.Models
 {
-    public class Employees
+    [Table("Employees")]
+    public class Employee
     {
         public int EmployeeID { get; set; }
         [NotNull]
