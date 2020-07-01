@@ -22,11 +22,11 @@ namespace DatingApp.API.Models
         public DateTime? HireDate { get; set; }
         [Column(TypeName = "nvarchar(60)")]
         public string Address { get; set; }
-        [Column(TypeName = "nvarchar(15)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string City { get; set; }
-        [Column(TypeName = "nvarchar(15)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string Region { get; set; }
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string PostalCode { get; set; }
         [Column(TypeName = "nvarchar(15)")]
         public string Country { get; set; }
@@ -40,6 +40,6 @@ namespace DatingApp.API.Models
         [Column(TypeName = "nvarchar(255)")]
         public string PhotoPath { get; set; }
         
-        public string ReportsTo { get; set; }
+        //public string ReportsTo { get; set; }
     }
 }
