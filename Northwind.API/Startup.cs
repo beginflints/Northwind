@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Northwind.API.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Northwind.API
 {
@@ -26,6 +28,9 @@ namespace Northwind.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //services.AddDbContext<NorthwindDbContext>(x => x.UseSqlite(Configuration.GetConnectionString("SQLiteConnection")));
+            services.AddDbContext<NorthwindDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("SQLConnection")));
+            // services.AddDbContext<NorthwindDbContext>(optionsAction=>optionsAction.UseSqlServer(Configuration.GetConnectionString("SQLConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
