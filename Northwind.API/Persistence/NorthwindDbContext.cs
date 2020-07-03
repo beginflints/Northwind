@@ -1,5 +1,6 @@
 using DatingApp.API.Models;
 using Microsoft.EntityFrameworkCore;
+using Northwind.API.Models;
 
 namespace Northwind.API.Persistence
 {
@@ -23,6 +24,7 @@ namespace Northwind.API.Persistence
             // modelBuilder.Entity<Order>().Property<DateTime>("UpdateDate");
         }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Order> Order { get; set; }
         // public DbSet<Make> Makes { get; set; }
         // public DbSet<Model> Models { get; set; }
         // public DbSet<Customer> Customers { get; set; }
