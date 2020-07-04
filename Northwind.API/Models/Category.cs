@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DatingApp.API.Models
@@ -6,10 +7,9 @@ namespace DatingApp.API.Models
     public class Category
     {
         public int CategoryID { get; set; }
-        [Column(TypeName="nvarchar(15)")]
         public string CategoryName { get; set; }
         public string Description { get; set; }
         [Column(TypeName="image")]
-        public byte[] MyProperty { get; set; }
+        public byte[] Picture { get; set; }
     }
 }

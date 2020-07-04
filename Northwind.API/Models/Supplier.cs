@@ -1,15 +1,12 @@
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
-namespace DatingApp.API.Models
+namespace Northwind.API.Models
 {
-    [Table("Customers")]
-    public class Customer
+    public class Supplier
     {
-        [Key]
-        [Required]
-        public string CustomerID { get; set; }
-        [Required]
+        public int SupplierID { get; set; }
+        [NotNull]
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
         public string ContactTitle { get; set; }
@@ -20,5 +17,6 @@ namespace DatingApp.API.Models
         public string Country { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }
+        public string HomePage { get; set; }
     }
 }
