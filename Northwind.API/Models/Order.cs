@@ -10,7 +10,7 @@ namespace Northwind.API.Models
     [Table("Orders")]
     public class Order
     {
-        public int OrderID { get; set; }
+        public int OrderId { get; set; }
         public Customer Customer { get; set; }
         public Employee Employee { get; set; }
         public DateTime? OrderDate { get; set; }

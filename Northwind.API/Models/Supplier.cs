@@ -5,7 +5,7 @@ namespace Northwind.API.Models
 {
     public class Supplier
     {
-        public int SupplierID { get; set; }
+        public int SupplierId { get; set; }
         [NotNull]
         public string CompanyName { get; set; }
         public string ContactName { get; set; }

@@ -6,10 +6,10 @@ namespace Northwind.API.Persistence
 {
     public class NorthwindDbContext : DbContext
     {
-        public NorthwindDbContext(DbContextOptions<NorthwindDbContext> options) 
+        public NorthwindDbContext(DbContextOptions<NorthwindDbContext> options)
         : base(options)
         {
-            
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -18,6 +18,7 @@ namespace Northwind.API.Persistence
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<OrderDetail>().HasKey(o => new { o.OrderId, o.ProductId });
             // modelBuilder.Entity<Customer>().Property<DateTime>("UpdateDate");
             // modelBuilder.Entity<Customer>().Property<DateTime>("CreateDate");
             // modelBuilder.Entity<Order>().Property<DateTime>("CreateDate");
@@ -26,8 +27,8 @@ namespace Northwind.API.Persistence
         public DbSet<Category> Category { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Employee> Employee { get; set; }
-        // public DbSet<Order> Order { get; set; }
-        // public DbSet<OrderDetail> OrderDetail { get; set; }
+        public DbSet<Order> Order { get; set; }
+        //public DbSet<OrderDetail> OrderDetail { get; set; }
         // public DbSet<Product> Products { get; set; }
         public DbSet<Region> Region { get; set; }
         // public DbSet<Shipper> Shipper { get; set; }

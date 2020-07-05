@@ -7,7 +7,7 @@ namespace Northwind.API.Models
     [Table("Products")]
     public class Product
     {
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
         [NotNull]
         public string ProductName { get; set; }
         public Supplier Supplier { get; set; }

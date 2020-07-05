@@ -7,7 +7,7 @@ namespace DatingApp.API.Models
     [Table("Employees")]
     public class Employee
     {
-        public int EmployeeID { get; set; }
+        public int EmployeeId { get; set; }
         [NotNull]
         public string LastName { get; set; }
         [NotNull]

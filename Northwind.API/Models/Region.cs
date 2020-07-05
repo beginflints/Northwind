@@ -2,7 +2,7 @@ namespace Northwind.API.Models
 {
     public class Region
     {
-        public int RegionID { get; set; }   
+        public int RegionId { get; set; }   
         public string RegionDescription { get; set; }
     }
 }
