@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
@@ -10,8 +11,7 @@ namespace Northwind.API.Models
     public class Order
     {
         public int OrderID { get; set; }
-        [NotNull]
-        public string CustomerID { get; set; }
+        public Customer Customer { get; set; }
         public Employee Employee { get; set; }
         public DateTime? OrderDate { get; set; }
         public DateTime? RequiredDate { get; set; }
@@ -24,5 +24,7 @@ namespace Northwind.API.Models
         public string ShipRegion { get; set; }
         public string ShipPostalCode { get; set; }
         public string ShipCountry { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+
     }
 }

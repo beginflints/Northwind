@@ -7,7 +7,7 @@ namespace DatingApp.API.Models
     public class Customer
     {
         [Key]
-        [Required]
+        [Column(TypeName="nvarchar(5)")]
         public string CustomerID { get; set; }
         [Required]
         public string CompanyName { get; set; }
