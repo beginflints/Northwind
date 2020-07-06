@@ -32,8 +32,8 @@ namespace Northwind.API.Persistence
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Employee> Employee { get; set; }
         public DbSet<Order> Order { get; set; }
-        //public DbSet<OrderDetail> OrderDetail { get; set; }
-        // public DbSet<Product> Products { get; set; }
+        public DbSet<OrderDetail> OrderDetail { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<Region> Region { get; set; }
         public DbSet<Shipper> Shipper { get; set; }
         public DbSet<Supplier> Supplier { get; set; }
