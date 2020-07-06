@@ -16,6 +16,7 @@ namespace Northwind.API.Persistence
         {
 
         }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<OrderDetail>().HasKey(o => new { o.OrderId, o.ProductId });
@@ -26,8 +27,6 @@ namespace Northwind.API.Persistence
             // modelBuilder.Entity<Order>().Property<DateTime>("CreateDate");
             // modelBuilder.Entity<Order>().Property<DateTime>("UpdateDate");
         }
-
-
         public DbSet<Category> Category { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Employee> Employee { get; set; }
