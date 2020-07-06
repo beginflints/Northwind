@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Northwind.API.Persistence;
 
 namespace Northwind.API.Migrations
 {
     [DbContext(typeof(NorthwindDbContext))]
-    partial class NorthwindDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200705171926_FixTypeName")]
+    partial class FixTypeName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -275,24 +277,6 @@ namespace Northwind.API.Migrations
                     b.ToTable("Region");
                 });
 
-            modelBuilder.Entity("Northwind.API.Models.Shipper", b =>
-                {
-                    b.Property<int>("ShipperId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CompanyName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ShipperId");
-
-                    b.ToTable("Shippers");
-                });
-
             modelBuilder.Entity("Northwind.API.Models.Supplier", b =>
                 {
                     b.Property<int>("SupplierId")
@@ -338,24 +322,6 @@ namespace Northwind.API.Migrations
                     b.ToTable("Supplier");
                 });
 
-            modelBuilder.Entity("Northwind.API.Models.Territory", b =>
-                {
-                    b.Property<string>("TerritoryId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("RegionId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TerritoryDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("TerritoryId");
-
-                    b.HasIndex("RegionId");
-
-                    b.ToTable("Territories");
-                });
-
             modelBuilder.Entity("Northwind.API.Models.Order", b =>
                 {
                     b.HasOne("DatingApp.API.Models.Customer", "Customer")
@@ -391,13 +357,6 @@ namespace Northwind.API.Migrations
                     b.HasOne("Northwind.API.Models.Supplier", "Supplier")
                         .WithMany()
                         .HasForeignKey("SupplierId");
-                });
-
-            modelBuilder.Entity("Northwind.API.Models.Territory", b =>
-                {
-                    b.HasOne("Northwind.API.Models.Region", "Region")
-                        .WithMany()
-                        .HasForeignKey("RegionId");
                 });
 #pragma warning restore 612, 618
         }

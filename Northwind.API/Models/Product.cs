@@ -13,8 +13,8 @@ namespace Northwind.API.Models
         public Supplier Supplier { get; set; }
         public Category Category { get; set; }
         public string QuantityPerUnit { get; set; }
-        [Column(TypeName="money")]
-        public decimal UnitPrice { get; set; }
+        [Column(TypeName="decimal(18,2)")]
+        public double UnitPrice { get; set; }
         public int UnitInStock { get; set; }
         public int ReOrderLevel { get; set; }
         public bool Discontinued { get; set; }

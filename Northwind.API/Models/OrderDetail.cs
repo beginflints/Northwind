@@ -12,6 +12,7 @@ namespace Northwind.API.Models
         public Product Product { get; set; }
         public int UnitPrice { get; set; }
         public int Quantity { get; set; }
+        [Column(TypeName="decimal(18,4)")]
         public double Discount { get; set; }
     }
 }
