@@ -1,6 +1,5 @@
-using DatingApp.API.Models;
-using Microsoft.EntityFrameworkCore;
 using Northwind.API.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Northwind.API.Persistence
 {
@@ -16,11 +15,11 @@ namespace Northwind.API.Persistence
         {
 
         }
-        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<OrderDetail>().HasKey(o => new { o.OrderId, o.ProductId });
-            
+
             // var entityTypes = db.Model.GetEntityTypes().Select(t => t.ClrType).ToList();
             // modelBuilder.Entity<Customer>().Property<DateTime>("UpdateDate");
             // modelBuilder.Entity<Customer>().Property<DateTime>("CreateDate");
@@ -37,5 +36,17 @@ namespace Northwind.API.Persistence
         public DbSet<Shipper> Shipper { get; set; }
         public DbSet<Supplier> Supplier { get; set; }
         public DbSet<Territory> Territory { get; set; }
+
+        // public override int SaveChanges()
+        // {
+        //     var modifiedEntries = ChangeTracker
+        //                         .Entries().Where(x => x.State == EntityState.Added);
+
+        //     foreach (var item in modifiedEntries)
+        //     {
+        //         item.Property("CreatedDate").CurrentValue = DateTime.Now;
+        //     }
+        //     return base.SaveChanges();
+        // }
     }
 }

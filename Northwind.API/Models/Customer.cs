@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DatingApp.API.Models
+namespace Northwind.API.Models
 {
     [Table("Customers")]
     public class Customer

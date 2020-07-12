@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 
-namespace DatingApp.API.Models
+namespace Northwind.API.Models
 {
     [Table("Employees")]
     public class Employee
