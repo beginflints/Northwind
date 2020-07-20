@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Northwind.API.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Ngrok.AspNetCore;
 
 namespace Northwind.API
 {
@@ -33,7 +34,19 @@ namespace Northwind.API
             services.AddDbContext<NorthwindDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("SQLConnection")));
             // services.AddDbContext<NorthwindDbContext>(optionsAction=>optionsAction.UseSqlServer(Configuration.GetConnectionString("SQLConnection")));
             services.AddMvc();
-            
+
+            //For Ngrok
+            //https://github.com/kg73/NgrokAspNetCore
+            // services.AddNgrok();
+            // services.AddNgrok(options =>
+            //     {
+            //         options.Disable = false;
+            //         options.ManageNgrokProcess = true;
+            //         options.DetectUrl = true;
+                    
+            //     });
+
+            //For Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
@@ -64,6 +77,10 @@ namespace Northwind.API
             {
                 endpoints.MapControllers();
             });
+
+
+
+
         }
     }
 }
